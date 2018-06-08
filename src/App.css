@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 80px;
+  background-color: blue
+}
+
+.Banner {
+  text-align: center;
+  padding-top: 20px;
+  color: white;
+  font-size: 200%;
+}
+
+.ChatApp {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 400px;
+  width: flex;
+  /*margin: .5em;*/
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  /*float: left;*/
+}
+
+
+.App .MessageList {
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.App .MessageForm {
+  background: #eee;
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 3px 3px;
+  box-sizing: border-box;
+  flex: 0 0 30px;
+}

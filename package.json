@@ -1,0 +1,30 @@
+{
+  "name": "react-chat-interface",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "aws-sdk": "^2.165.0",
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "classnames": "^2.2.5",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "hotnode": "0.0.8",
+    "node-uuid": "^1.4.8",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-bootstrap": "^0.31.5",
+    "react-dom": "^15.6.1",
+    "react-scripts": "^1.0.11",
+    "react-toolbox": "^2.0.0-beta.12",
+    "semantic-ui-react": "^0.77.0",
+    "socket.io": "^2.0.4"
+  },
+  "proxy": "http://localhost:3001",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
