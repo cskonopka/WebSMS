@@ -63,7 +63,8 @@ class App extends Component {
     return (
       <div>
           <div className="App-logo">
-              <p className="Banner">callButton</p>
+              <h1 className="Banner">twilioWebSMS</h1>
+              <h4 className="Banner">This is a basic example of how to set up a webpage using React and creating a button that will post to the NodeJS apiusing axios which will then send a sms using the twilio api.</h4>
           </div>
           <div className="App">
               <br/>
