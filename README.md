@@ -1,4 +1,4 @@
-# callButton
+# webSMS
 #### What? 
 This is a basic example of how to set up a webpage using React and creating a button that will post to the NodeJS apiusing axios which will then send a sms using the twilio api. 
 
