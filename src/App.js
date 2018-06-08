@@ -27,7 +27,7 @@ class App extends Component {
   handleClick(e){
       let inputValues = this.state.values;
       var callsetupDate = new Date();
-      const url = 'http://localhost:9000/api/callsetup';
+      const url = 'http://localhost:9001/api/callsetup';
       axios.post(url, {
           callsetupTimestamp: callsetupDate,
           callsetupNumber: inputValues['callerNumber'],
@@ -44,7 +44,7 @@ class App extends Component {
   }
 
   textCaller(){
-    const url = 'http://127.0.0.1:9000/api/callsetup';
+    const url = 'http://127.0.0.1:9001/api/callsetup';
 
     axios.post(url, {
         txtcallerDispatcherID: this.state.showValues["dispatcherID"],
@@ -70,7 +70,7 @@ class App extends Component {
               <Grid>
                   <Row>
                       <Col xs={3} md={4}>
-                      <p>Texting # : <em>{this.state.showValues["callerNumber"]}</em></p>
+                      <p>Send SMS # : <em>{this.state.showValues["callerNumber"]}</em></p>
                       </Col>
                       <Col xs={3} md={4}>
                       <input style={{width: '90%'}} type="text" placeholder="number" value={this.state.values[ "callerNumber"]} onChange={this.inputText.bind(this, "callerNumber")}/>

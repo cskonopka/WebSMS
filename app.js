@@ -1,5 +1,5 @@
 const 	express 				= require("express");
-const 	port 					= process.env.PORT || 9000;
+const 	port 					= process.env.PORT || 9001;
 let 	app 					= require('express')();
 const 	index 					= require("./routes/index");
 let 	server 					= app.listen(port);
@@ -11,9 +11,19 @@ const 	axios 					= require("axios");
 const 	fetch 					= require('node-fetch')
 var 	uuid 					= require('node-uuid');
 const 	Joi 					= require('joi');
+}
+
+var twilioCreds = 
+{
+	"accountSid": "accountSid",
+	"authToken": "authToken",
+	"number": "YOUR_TWILIO_NUMBER_HERE"
+}
+
 
 // twilio
-var 	client 					= require('twilio')(accountSid, authToken);
+
+var 	client 					= require('twilio')(twilioCreds.accountSid, twilioCreds.authToken);
 
 // globals
 var 	newID;
@@ -22,12 +32,6 @@ var 	globalDispatchNumber 	= [];
 var 	globalDispatchChat 		= [];
 var 	clients 				= {};
 
-var dispatchNumbers = {
-  "number": 
-    [
-      'YOUR_TWILIO_NUMBER_HERE'
-    ]
-}
 console.log(`Listening on port ${port}`);
 
 // express setup
@@ -57,7 +61,7 @@ app.post('/api/callsetup', (request, response) => {
 				console.log('*------------------------- CALL SETUP -------');
 				var randomizedID = '"' + newID + '"';
 				globalCallerNumber = request.body.callsetupNumber;
-				globalDispatchNumber = dispatchNumbers.number[0];
+				globalDispatchNumber = twilioCreds.number;
 				console.log('globalDispatchNumber ----> ', globalDispatchNumber);
 				console.log('globalCallerNumber ----> ', globalCallerNumber);				
 				console.log('*------------------------- TXT CALLER -------');
